@@ -45,9 +45,8 @@ class User
   def bc_api
     config = {
       store_hash: self.store_hash,
-      oauth_client_id: bc_client_id,
-      oauth_client_secret: bc_client_secret,
-      oauth_token: self.access_token
+      client_id: bc_client_id,
+      access_token: self.access_token
     }
     Bigcommerce::Api.new(config)
   end
